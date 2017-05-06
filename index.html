@@ -1,0 +1,626 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Blockchain Demo</title>
+    <link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Theme CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link href="css/site.css" rel="stylesheet">
+</head>
+
+<body id="page-top" class="index">
+    <div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#" style="padding-top:0px;padding-bottom:0px;">
+                    <img style="max-height:50px" alt="Brand" src="img/tr_logo_white2.png">
+                </a>
+                <!--<a class="navbar-brand" href="#page-top">Blockchain Demo</a>-->
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#manufacturer">Manufacturer</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#managementtools">Management Tools</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#thridpartytools">Third Party Tools</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#databaseSec">Database</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <section style="padding: 150px 0;">
+        <div class="container" id="maincontent" tabindex="-1">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 style="text-transform:none;">IoT Blockchain Demo</h2>
+                    <hr class="hr-normal">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-5 col-md-5 col-md-offset-1">
+                    <img class="img-responsive" src="img/cmu_heinz_logo_white.jpg" alt="">
+                </div>
+                <div class="col-sm-2 col-md-1 text-center">
+                    <h1 style="font-size:100px;margin-top:50px;">+</h1>
+                </div>
+                <div class="col-sm-5 col-md-5">
+                    <img class="img-responsive" src="img/tr_logo_white.png" style="margin-top:45px;" alt="">
+                </div>
+                <div class="col-sm-12 col-md-12">
+                    <div class="intro-text">
+                        <h1 class="name text-center" style="text-transform:none">MISM Capstone Project</h1>
+                        <p>
+                            This page demos the architecture developed throughout the course of the capstone project. To allow this demo to run, GETH
+                            must be installed on the local computer and a private Ethereum blockchain configured to run Web3.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header -->
+    <!--<header>
+        <div class="container" id="maincontent" tabindex="-1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                        <h1 class="name" style="text-transform:none">IoT Blockchain Demo</h1>
+                        <hr class="star-light">
+                        <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>-->
+    <!-- Portfolio Grid Section -->
+    <section class="success" id="manufacturer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Manufacturer Tools</h2>
+                    <hr class="hr-normal">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <form class="">
+                        <h3>Deploy Smart Contract</h3>
+                        <div class="form-group">
+                            <input class="form-control" type="text" placeholder="Contract Address" id="contractAddressInput" />
+                        </div>
+                        <div class="form-group">
+                            <button id="deployButton" type="button" class="btn btn-primary">Deploy</button>
+                        </div>
+                    </form>
+                    <hr/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                    <h3>Add Sensor to Blockchain</h3>
+                    <form>
+                        <div class="form-group">
+                            <!-- <label for="serialNum" class="col-sm-4 control-label">Serial Num</label> -->
+                            <input type="text" class="form-control" placeholder="Sensor Serial Num" id="sensorSerial">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="sensorModel" class="col-sm-4 control-label">Sensor Model</label> -->
+                            <input type="text" class="form-control" placeholder="Sensor Model" id="sensorModel" required="" data-validation-required-message="Please enter sensor model."
+                                aria-invalid="false">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="serialManufacturer" class="col-sm-4 control-label">Sensor Manufacturer</label> -->
+                            <input type="text" class="form-control" placeholder="Sensor Manufacturer" id="sensorManufacturer" required="" data-validation-required-message="Please enter sensor manufacturer."
+                                aria-invalid="false">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <div class="form-group" id="divToAddAfter">
+                            <!-- <label for="serialManufacturer" class="col-sm-4 control-label">Sensor Manufacturer</label> -->
+                            <input type="text" class="form-control" placeholder="Sensor Public Key" id="sensorPubKey" required="" data-validation-required-message="Please enter sensor public key."
+                                aria-invalid="false">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <button id="addSensorForm" type="button" class="btn btn-primary">Add</button>
+                    </form>
+                </div>
+                <div class="col-md-7">
+                    <h3>Given Sensors with Public / Private Key Pair</h3>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tr>
+                                <th>Add</th>
+                                <th>Serial</th>
+                                <th>Model</th>
+                                <th>Manufacturer</th>
+                                <th>Hash SHA-256</th>
+                                <th>Pub Key</th>
+                            </tr>
+                            <tr>
+                                <td><button type="button" class="btn btn-default btn-xs" onclick="addSensor(this);"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
+                                <td>serial1</td>
+                                <td>model1</td>
+                                <td>manufacturer1</td>
+                                <td><input type="text" readonly value="8e3c509380ab0b25d40cdce573df2b92f3988a35bcd87b261f3c2d6602cf5e57"></td>
+                                <td><input type="text" readonly value="5730379479402919351732944629729781003415854777198467921027698911377719767952005400186685612718627415523832368152925990087518079443760965616544955613253473"></td>
+                            </tr>
+                            <tr>
+                                <td><button type="button" class="btn btn-default btn-xs" onclick="addSensor(this);"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
+                                <td>serial2</td>
+                                <td>model2</td>
+                                <td>manufacturer1</td>
+                                <td><input type="text" readonly value="45d4fa5689287c81477226b7c7239fadbbddacbede9ef625e31d2530f7cc23f3"></td>
+                                <td><input type="text" readonly value="9948757954555399435932640955984079511996884208118788109258685972658192664462984319597393255334657608979950199925384065361204564301678906113885107518699563"></td>
+                            </tr>
+                            <tr>
+                                <td><button type="button" class="btn btn-default btn-xs" onclick="addSensor(this);"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
+                                <td>serial3</td>
+                                <td>model1</td>
+                                <td>manufacturer2</td>
+                                <td><input type="text" readonly value="c2d163227fd02ba580a7aa27452521f996342528bde7533ce8054b0faa56f30a"></td>
+                                <td><input type="text" readonly value="9154466318214597317822890956528137784741091783507901948023511879961645345575430967017254942469195391815985822833293365660519249735869766042520978116125319"></td>
+                            </tr>
+                            <tr>
+                                <td><button type="button" class="btn btn-default btn-xs" onclick="addSensor(this);"><i class="fa fa-plus" aria-hidden="true"></i></button></td>
+                                <td>serial4</td>
+                                <td>model1</td>
+                                <td>manufacturer2</td>
+                                <td><input type="text" readonly value="8aa61a2762bc478c652447acb3f222e6a752e3bf484153fb573dafb1cb4c6ae9"></td>
+                                <td><input type="text" readonly value="6312257328424637714031383539187009920627377887200953615994825511658084909292890497646408273414285478809250241989576125362382196426144064760027511411267711"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="managementtools">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Farmer / IoT Management Tools</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-3 text-center">
+                    <h3>Number of Add Sensor Messages</h3>
+                    <h2 id="numAddSensorMessages" style="padding-bottom:15px">-</h2>
+                    <button id="numAddSensorMessagesBtn" type="submit" class="btn btn-primary">Refresh</button>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h3>Number of Sensor Reading Messages</h3>
+                    <h2 id="numSensorReadingMessages" style="padding-bottom:15px">-</h2>
+                    <button id="numSensorReadingMessagesBtn" type="submit" class="btn btn-primary">Refresh</button>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h3>Delete Add Sensor Messages</h3>
+                    <button id="deleteAddMessages" type="submit" class="btn btn-danger">Delete</button>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h3>Delete Sensor Reading Messages</h3>
+                    <button id="deleteReadingMessages" type="submit" class="btn btn-danger">Delete</button>
+                </div>
+                <div class="clearfix visible-md-block"></div>
+                <div class="col-md-3 text-center">
+                    <h3>Clear Sensor Reading Database</h3>
+                    <button id="clearSensorReadingDatabase" type="submit" class="btn btn-danger">Clear</button>
+                </div>
+                <div class="col-md-3 text-center">
+                    <h3>Clear Unvalidated Reading Database</h3>
+                    <button id="clearUnvalidatedReadingDatabase" type="submit" class="btn btn-danger">Clear</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="success" id="thridpartytools">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Third Party Tools</h2>
+                    <hr class="hr-normal">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center">Lookup Sensor Public Key</h3>
+                    <form id="getSensorPubForm" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="sensorSerial2" class="col-sm-4 control-label">Sensor Serial Num</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="Sensor Serial Num" id="sensorSerial2">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sensorModel2" class="col-sm-4 control-label">Sensor Model</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="Sensor Model" id="sensorModel2" aria-invalid="false">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sensorManufacturer2" class="col-sm-4 control-label">Sensor Manufacturer</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="Sensor Manufacturer" id="sensorManufacturer2" aria-invalid="false">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <h4>OR</h4>
+                        </div>
+                        <div class="form-group">
+                            <label for="sensorHash2" class="col-sm-4 control-label">Sensor Serial Num</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="Sensor Hash" id="sensorHash2" aria-invalid="false">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 col-md-offset-4 col-sm-offset-4">
+                                <div class="btn-group">
+                                    <button type="submit" class="btn btn-primary">Fetch Key</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button id="clearPubKeyLookup" type="button" class="btn btn-default">Clear</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <h4 class="text-center">Public Key</h4>
+                            <div class="col-sm-12">
+                                <input type="text" class="form-control" placeholder="Public Key of Sensor" id="sensorPubKeyLookupVal" aria-invalid="false"
+                                    readonly>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!--<div class="col-md-6">
+                    <h3>Validate Sensor Hash</h3>
+                    <form id="validateSensorHash">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Sensor hash" id="sensorHashValue">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                        <button type="submit" class="btn btn-default">Get</button>
+                    </form>
+                </div>-->
+                <div class="col-md-6">
+                    <h3 class="text-center">Validate Data Signature</h3>
+                    <form id="validateSensorSig" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="plainDataValue" class="col-sm-4 control-label">Clear Data</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="Clear Data to Verify" id="plainDataValue">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="hashPlainDataValue" class="col-sm-4 control-label">Hash Clear Data</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="Hash of Plain Data" id="hashPlainDataValue" readonly>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="sensorPubKeyValue" class="col-sm-4 control-label">Public Key</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="Sensor public key" id="sensorPubKeyValue">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="dataSigValue" class="col-sm-4 control-label">Data Signature</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="Data signature" id="dataSigValue">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="form-group" id="alertAfter">
+                            <label for="plainDataSigValue" class="col-sm-4 control-label">Clear Signature</label>
+                            <div class="col-sm-8">
+                                <input type="text" class="form-control" placeholder="Plain signature" id="plainDataSigValue" readonly>
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-12 col-md-offset-4 col-sm-offset-4">
+                                <button type="submit" class="btn btn-default">Clear</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="databaseSec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Database Values</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Sensor Data from Database</h3>
+                    <form id="getSensorData">
+                        <div class="table-responsive">
+                            <table id="sensorDataFromDb" class="table table-striped">
+                                <tr>
+                                    <th>SensorHash</th>
+                                    <th>Data</th>
+                                    <th>Date</th>
+                                    <th>Sig Data To Check</th>
+                                    <th>Data Signature</th>
+                                </tr>
+                            </table>
+                        </div>
+                        <div id="sensorDataLoader" hidden class="col-md-12 text-center">
+                            <img alt="loader" src="img/default.gif" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Refresh Data</button>
+                    </form>
+                </div>
+                <div class="col-md-12">
+                    <h3>Unvalidated Sensor Data from Database</h3>
+                    <form id="getUnvalidatedData">
+                        <div class="table-responsive">
+                            <table id="sensorUnvalidatedFromDb" class="table table-striped">
+                                <tr>
+                                    <th>SensorHash</th>
+                                    <th>Data</th>
+                                    <th>Date</th>
+                                    <th>Sig Data To Check</th>
+                                    <th>Data Signature</th>
+                                </tr>
+                            </table>
+                            <div id="sensorDataLoader2" hidden class="col-md-12 text-center">
+                                <img alt="loader" src="img/default.gif" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">Refresh Data</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <!--Copyright &copy; Your Website 2016-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="scroll-top page-scroll">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="vendor/web3/web3.min.js"></script>
+    <script src="vendor/crypto/bignumber.js"></script>
+    <script src="vendor/crypto/sha256.js"></script>
+    <script src="vendor/moment/moment.js"></script>
+    <script src="vendor/crypto/jsbn.js"></script>
+    <script src="vendor/crypto/jsbn2.js"></script>
+
+    <!-- jQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="js/freelancer.min.js"></script>
+
+    <!-- App JavaScript Functions-->
+    <script src="js/app.js"></script>
+
+    <script type="text/javascript">
+        var Web3 = require('web3');
+        var web3 = new Web3();
+        //var bigInt = require("big-integer");
+        var accounts;
+        var account;
+        var contractAddress; //= '0x0e7eaf303254161f56b3e58c79dbc28c186ebeac'; //= //'0xc7dF2847344caA0B2CD19C53EEa6CF6AfC755a53';
+        var contractOb;
+        var contractAbi = [{ "constant": false, "inputs": [{ "name": "sensorHash", "type": "string" }, { "name": "publicKey", "type": "string" }], "name": "addSensor", "outputs": [{ "name": "", "type": "bool" }], "payable": false, "type": "function" }, { "constant": true, "inputs": [{ "name": "sensorHash", "type": "string" }], "name": "getPublicKey", "outputs": [{ "name": "", "type": "string" }], "payable": false, "type": "function" }, { "constant": true, "inputs": [{ "name": "sensorHash", "type": "string" }], "name": "validateHash", "outputs": [{ "name": "", "type": "bool" }], "payable": false, "type": "function" }];
+
+        $(function () {
+            if (typeof web3 !== 'undefined') {
+                //web3 = new Web3(web3.currentProvider);
+                web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8086"));
+            } else {
+                // set the provider you want from Web3.providers
+                web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8086"));
+            }
+            web3.eth.getAccounts(function (err, accs) {
+                if (err != null) {
+                    alert("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
+                    return;
+                }
+                if (accs.length == 0) {
+                    alert("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
+                    return;
+                }
+                accounts = accs;
+                account = accounts[0];
+                listAccounts();
+                //var balance = web3.eth.getBalance(accs[0]);
+            });
+
+            //DEPLOY CONTRACT ** IT IS DEPLOYING EVERYTIME FOR SIMPLICITY OF DEMO
+            // var sensorgroup_sol_sensorgroupContract = web3.eth.contract([{ "constant": false, "inputs": [{ "name": "sensorHash", "type": "string" }, { "name": "publicKey", "type": "string" }], "name": "addSensor", "outputs": [{ "name": "", "type": "bool" }], "payable": false, "type": "function" }, { "constant": true, "inputs": [{ "name": "sensorHash", "type": "string" }], "name": "getPublicKey", "outputs": [{ "name": "", "type": "string" }], "payable": false, "type": "function" }, { "constant": true, "inputs": [{ "name": "sensorHash", "type": "string" }], "name": "validateHash", "outputs": [{ "name": "", "type": "bool" }], "payable": false, "type": "function" }]);
+            // var sensorgroup_sol_sensorgroup = sensorgroup_sol_sensorgroupContract.new(
+            //     {
+            //         from: account,
+            //         data: '0x6060604052341561000c57fe5b5b6106408061001c6000396000f30060606040526000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636063ad1b14610051578063bff9082114610106578063c2c1a1ed146101e7575bfe5b341561005957fe5b6100ec600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610259565b604051808215151515815260200191505060405180910390f35b341561010e57fe5b61015e600480803590602001908201803590602001908080601f0160208091040260200160405190810160405280939291908181526020018383808284378201915050505050509190505061035d565b60405180806020018281038252838181518152602001915080519060200190808383600083146101ad575b8051825260208311156101ad57602082019150602081019050602083039250610189565b505050905090810190601f1680156101d95780820380516001836020036101000a031916815260200191505b509250505060405180910390f35b34156101ef57fe5b61023f600480803590602001908201803590602001908080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505091905050610478565b604051808215151515815260200191505060405180910390f35b6000610263610517565b838160000181905250828160200181905250600181604001901515908115158152505080600082600001516040518082805190602001908083835b602083106102c1578051825260208201915060208101905060208303925061029e565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390206000820151816000019080519060200190610310929190610547565b50602082015181600101908051906020019061032d929190610547565b5060408201518160020160006101000a81548160ff021916908315150217905550905050600191505b5092915050565b6103656105c7565b60006000836040518082805190602001908083835b6020831061039d578051825260208201915060208101905060208303925061037a565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390209050806001018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561046a5780601f1061043f5761010080835404028352916020019161046a565b820191906000526020600020905b81548152906001019060200180831161044d57829003601f168201915b505050505091505b50919050565b600060006000836040518082805190602001908083835b602083106104b2578051825260208201915060208101905060208303925061048f565b6001836020036101000a038019825116818451168082178552505050505050905001915050908152602001604051809103902090508060020160009054906101000a900460ff16156105075760019150610511565b60009150610511565b5b50919050565b60606040519081016040528061052b6105db565b81526020016105386105db565b81526020016000151581525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061058857805160ff19168380011785556105b6565b828001600101855582156105b6579182015b828111156105b557825182559160200191906001019061059a565b5b5090506105c391906105ef565b5090565b602060405190810160405280600081525090565b602060405190810160405280600081525090565b61061191905b8082111561060d5760008160009055506001016105f5565b5090565b905600a165627a7a72305820ae73f2085f0bcac88690d6563fec8fd567b83401cff26fd8c9b651711d4bfdde0029',
+            //         gas: '4700000'
+            //     }, function (e, contract) {
+            //         console.log(e, contract);
+            //         if (typeof contract.address !== 'undefined') {
+            //             contractOb = contract;
+            //             contractAddress = contract.address;
+            //             console.log('Contract mined! address: ' + contract.address + ' transactionHash: ' + contract.transactionHash);
+            //         }
+            //     });
+
+            $('#addSensorForm').click(function (e) {
+                e.preventDefault();
+                addSensorToBlockchain();
+                return false;
+            });
+            $('#getSensorPubForm').submit(function (e) {
+                e.preventDefault();
+                getSensorPublicKey();
+                return false;
+            });
+            $('#validateSensorHash').submit(function (e) {
+                e.preventDefault();
+                validateSensorHash();
+                return false;
+            });
+            $('#getSensorData').submit(function (e) {
+                e.preventDefault();
+                var url = "http://farmiotdata.azurewebsites.net/api/SensorData";
+                var idVal = "#sensorDataFromDb";
+                var loadId = '#sensorDataLoader';
+                refreshSensorData(url, idVal, loadId);
+                return false;
+            });
+            $('#getUnvalidatedData').submit(function (e) {
+                e.preventDefault();
+                var url = "http://farmiotdata.azurewebsites.net/api/ErrorData";
+                var idVal = "#sensorUnvalidatedFromDb";
+                var loadId = '#sensorDataLoader2';
+                refreshSensorData(url, idVal, loadId);
+                return false;
+            });
+            $('#validateSensorSig').submit(function (e) {
+                e.preventDefault();
+                clearDataValidationForm();
+                return false;
+            });
+            $('#plainDataValue').keyup(function () {
+                var hashVal = sha256($('#plainDataValue').val());
+                $('#hashPlainDataValue').val(hashVal);
+            });
+            $('#dataSigValue').keyup(function () {
+                validateSensorData();
+            });
+
+            $('#clearPubKeyLookup').click(function () {
+                $('#sensorSerial2').val('');
+                $('#sensorModel2').val('');
+                $('#sensorManufacturer2').val('');
+                $('#sensorHash2').val('');
+                $('#sensorPubKeyLookupVal').val('');
+            });
+            $('#numAddSensorMessagesBtn').click(function () {
+                var url = "http://farmiotdata.azurewebsites.net/api/NumAddSensorMessages";
+                var divId = "#numAddSensorMessages";
+                refreshSensorMessages(url, divId);
+            });
+            $('#numSensorReadingMessagesBtn').click(function () {
+                var url = "http://farmiotdata.azurewebsites.net/api/NumSensorReadingMessages";
+                var divId = "#numSensorReadingMessages";
+                refreshSensorMessages(url, divId);
+            });
+            $('#deleteAddMessages').click(function () {
+                var url = "http://farmiotdata.azurewebsites.net/api/NumAddSensorMessages";
+                var choice = confirm('Are you sure you want to delete messages?');
+                if (choice) {
+                    deleteMessagesInQueue(url);
+                    $('#numAddSensorMessagesBtn').click();
+                }
+            });
+            $('#deleteReadingMessages').click(function () {
+                var url = "http://farmiotdata.azurewebsites.net/api/NumSensorReadingMessages";
+                var choice = confirm('Are you sure you want to delete messages?');
+                if (choice) {
+                    deleteMessagesInQueue(url);
+                    $('#numSensorReadingMessagesBtn').click();
+                }
+            });
+            $('#clearSensorReadingDatabase').click(function () {
+                var url = "http://farmiotdata.azurewebsites.net/api/SensorData";
+                var choice = confirm('Are you sure you want to clear database?');
+                if (choice) {
+                    clearDatabaseCollection(url);
+                }
+            });
+            $('#clearUnvalidatedReadingDatabase').click(function () {
+                var url = "http://farmiotdata.azurewebsites.net/api/ErrorData";
+                var choice = confirm('Are you sure you want to clear database?');
+                if (choice) {
+                    clearDatabaseCollection(url);
+                }
+            });
+            $('#deployButton').click(function(){
+                deployContract();
+            });
+        });
+       
+        function addSensor(div) {
+            var tdArray = $(div.parentElement.parentElement).children('td');
+            $('#sensorSerial').val(tdArray[1].innerText);
+            $('#sensorModel').val(tdArray[2].innerText);
+            $('#sensorManufacturer').val(tdArray[3].innerText);
+            $('#sensorPubKey').val($(tdArray[5]).children('input').first().val());
+        }
+    </script>
+
+</body>
+
+</html>
